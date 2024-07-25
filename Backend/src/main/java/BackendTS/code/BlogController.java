@@ -30,7 +30,7 @@ public class BlogController {
 	}
 	
 	//Get a single post by id
-	@GetMapping("/{id")
+	@GetMapping("/{id}")
 	public String getPostById(@PathVariable Long id, Model model) {
 		BlogPost post = blogPostService.getPostById(id).orElse(null);
 		model.addAttribute("post", post);
